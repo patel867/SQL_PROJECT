@@ -1,0 +1,26 @@
+CREATE DATABASE STUDENT;  -- CREATING A DATABASE
+
+-- CREATING A TABLE
+CREATE TABLE STUDENT(
+ id  INT  GENERATED ALWAYS AS IDENTITY  PRIMARY KEY, -- does not recognize the AUTO_INCREMENT keyword (specific to MySQL). PostgreSQL uses the "SERIAL or GENERATED AS IDENTITY" keyword for auto-incrementing columns.
+ name VARCHAR (50),
+ age INT NOT NULL,
+ email varchar(50),
+ grade varchar(50)
+);
+
+
+--Running INSERT QUERY TOOLS
+
+INSERT INTO STUDENT (name,age,email,grade) VALUES
+('john',21,'john@gmail.com','A'),
+('ash',22,'ash@gmail.com','B+'),
+('eva',44,'eva@gmail.com','A+');
+
+--Fetching or retrieving data from a database
+
+SELECT * FROM STUDENT
+
+
+
+Output:
