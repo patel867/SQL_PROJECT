@@ -1,0 +1,79 @@
+CUSROMER:
+
+--"Creating Customer table"
+CREATE TABLE CUSTOMER(
+CUSTOMER_ID INT NOT NULL,
+NAME VARCHAR(50),
+PHONE INT NOT NULL,
+EMAIL VARCHAR(50)
+);
+
+--"inserting values into column"
+INSERT INTO CUSTOMER(customer_id,name,phone,email)VALUES  
+(1,'John Doe',123456789,'john@gmail.com'),
+(2,'Jane Smith',231564897,'jane@gmail.com'),
+(3,'Emma Brown',564231879,'emma@gmail.com')
+
+SELECT * FROM CUSTOMER  --"fetching or retriving data from customer table"
+
+
+DESTINATION:
+
+--"Creating Destination table"
+CREATE TABLE DESTINATION(
+DESTINATION_ID INT NOT NULL,
+NAME VARCHAR(50),
+COUNTRY VARCHAR(50),
+DECRIPTION VARCHAR (100)
+)
+
+--"inserting values into cloumns"
+INSERT INTO destination(destination_id,name,country,description)VALUES
+(1,'paris','france','city of lights,famous for eiffel tower1'),
+(2,'Tokyo','japan','vibrant city known for tech and culture'),
+(3,'cape town','south africa','beautiful coastal city with beaches')
+
+SELECT *FROM DESTINATION  --"fetching or retriving data from table"
+
+
+
+PACKAGES:
+
+--"Creating packages table"
+CREATE TABLE PACKAGES(
+PACKAGE_ID INT NOT NULL,
+NAME VARCHAR(70),
+PRICE INT,
+DESTINATION_ID INT NOT NULL,
+DESCRIPTION VARCHAR(90)
+)
+
+--"inserting into columns"
+INSERT INTO PACKAGES(package_id,name,price,destination_id,description)VALUES
+(1,'paris city tour',1200,1,'5-day guided tour of paris'),
+(2,'tokyo adventure',1500,2,'7-day tour including mt.fuji'),
+(3,'cape town safari',1800,3,'6-day safari and sightseeing package')
+
+SELECT * FROM PACKAGES --"fetching  or retriving data from the table"
+
+
+
+BOOKING:
+--"creating booking table"
+CREATE TABLE BOOKING(
+BOOKING_ID INT NOT NULL,
+CUSTOMER_ID INT NOT NULL,
+PACKAGE_ID INT NOT NULL,
+BOOKING_DATE  DATE,
+STATUS VARCHAR(70)
+)
+
+--"inserting values into columns"
+INSERT INTO BOOKING(booking_id,customer_id,package_id,booking_date,status)VALUES
+(1,1,1,2025-02-10,'confirmed'),
+(2,2,2,2025-03-15,'pending'),
+(3,3,3,2025-04-05,'confirmed')
+
+SELECT * FROM booking  --"fetching or retriving data from the table"
+
+
